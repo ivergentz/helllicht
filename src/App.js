@@ -1,5 +1,13 @@
+import React from 'react'
+import { GlobalStyle } from './GlobalStyle'
+
 function App() {
-  return <p>moin</p>
+  return (
+    <>
+      <GlobalStyle />
+      <p>moin</p>
+    </>
+  )
 }
 
 export default App
