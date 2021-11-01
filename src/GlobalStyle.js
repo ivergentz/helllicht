@@ -8,6 +8,9 @@ export const GlobalStyle = createGlobalStyle`
 :root {
 
     --orange: #ec6842;
+    --grey:   #333333;
+    --blue: #204569;
+
 }
 
 body {

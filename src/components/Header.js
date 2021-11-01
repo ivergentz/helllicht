@@ -16,6 +16,7 @@ const HeaderContainer = styled.section`
   top: 0;
   position: fixed;
   background: #fff;
+  color: var(--grey);
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 2px 0 2px 1px rgba(0, 0, 0, 0.1);
   height: 4rem;

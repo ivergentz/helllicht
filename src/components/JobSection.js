@@ -22,8 +22,9 @@ export default JobSection
 
 const SectionContainer = styled.section`
   display: flex;
+  width: 85%;
   flex-wrap: wrap;
-  margin: 8rem 0 0 0;
+  margin: 8rem auto 0 auto;
   justify-content: center;
 
   h1 {
@@ -37,17 +38,21 @@ const SectionContainer = styled.section`
     font-weight: 800;
     line-height: 2.5rem;
     font-size: 2rem;
-    color: rgb(51, 51, 51);
+    color: var(--grey);
     text-align: center;
   }
 `
 const BoxSection = styled.div`
   border: 8px solid var(--orange);
   font-family: 'Shadows Into Light', cursive;
-  width: 90%;
-  margin-top: 1.5rem;
-  color: rgb(32, 69, 105);
+  margin: 1.5rem 0;
+  color: var(--blue);
   padding: 1rem;
   font-size: 3rem;
   text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 2rem;
+  }
 `
