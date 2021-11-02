@@ -5,7 +5,7 @@ const JobSection = () => {
   return (
     <SectionContainer>
       <h1>(Werkstudent) Web Development</h1>
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
+      <h3>Lorem ipsum dolor sitsitsitsitsitsitsit amet. </h3>
       <BoxSection>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elitLorem ipsum
@@ -24,7 +24,7 @@ const SectionContainer = styled.section`
   display: flex;
   width: 85%;
   flex-wrap: wrap;
-  margin: 8rem auto 0 auto;
+  margin: 7rem auto 0 auto;
   justify-content: center;
 
   h1 {
@@ -45,7 +45,6 @@ const SectionContainer = styled.section`
 const BoxSection = styled.div`
   border: 8px solid var(--orange);
   font-family: 'Shadows Into Light', cursive;
-  margin: 1.5rem 0;
   color: var(--blue);
   padding: 1rem;
   font-size: 3rem;

@@ -2,6 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import arrow from '../images/arrow-down-60x100.png'
 import thumb from '../images/thumb-down-76x117.png'
+import ButtonElement from './ButtonElement'
+import LineElement from './LineElement'
+import StatementElement from './StatementElement'
+
+const statementOne = (
+  <p>
+    Lorem ipsum dolor sit amet consectetur, Iure amet provident dolorem,
+    recusandae at laudantium nisi magni consequatur libero pariatur hic natus
+    deserunt voluptate ab aspernatur sunt labore rem exercitationem?
+  </p>
+)
+
+const statementTwo = <p> Lorem ipsum dolor sit quam praesentium libero. 🤭</p>
+
+const statementThree = <p>Auf den Punkt gebracht:</p>
 
 const Tasks = () => {
   return (
@@ -26,8 +41,8 @@ const Tasks = () => {
           doloribus ea tempora unde aperiam ut. Distinctio, error aut. Cum,
           reiciendis?
         </Text>
-        <Statement>Lorem ipsum dolor sit quam praesentium libero.</Statement>
-        <Line />
+        <StatementElement text={statementOne} />
+        <LineElement />
         <h4>Other way around? 🤭</h4>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem
@@ -47,11 +62,9 @@ const Tasks = () => {
           doloribus ea tempora unde aperiam ut. Distinctio, error aut. Cum,
           reiciendis?
         </Text>
-        <Statement className="line">
-          Lorem ipsum dolor sit quam praesentium libero. 🤭
-        </Statement>
+        <StatementElement className="line" text={statementTwo} />
         <img src={arrow} alt="arrow down" />
-        <Statement>Auf den Punkt gebracht</Statement>
+        <StatementElement text={statementThree} />
         <img src={thumb} alt="thumb down" />
         <BoxSection>
           <p>
@@ -75,11 +88,7 @@ const Tasks = () => {
             <strong>Zeitraum</strong>: sofort
           </p>
         </BoxSection>
-        <Button>
-          <a href="mailto:jobs@helllicht.com?subject=Alles klar, ich bin dabei!">
-            Jetzt berwerben
-          </a>
-        </Button>
+        <ButtonElement />
       </TasksContainer>
     </>
   )
@@ -116,21 +125,6 @@ const Text = styled.p`
   margin: 0 0 1.5em;
 `
 
-const Statement = styled.p`
-  text-align: center;
-  font-family: 'Shadows Into Light', cursive;
-  margin: 1.5rem 0;
-  color: var(--blue);
-  padding: 1rem;
-  font-size: 2rem;
-`
-
-const Line = styled.hr`
-  width: 100%;
-  margin: 0;
-  border: 1px solid #ccc;
-`
-
 const BoxSection = styled.div`
   border: 8px solid var(--orange);
   margin: 1.5rem 0;
@@ -145,20 +139,5 @@ const BoxSection = styled.div`
     font-size: 1rem;
     text-align: left;
     margin-bottom: 1.5rem;
-  }
-`
-
-const Button = styled.div`
-  display: flex;
-  justify-content: center;
-
-  a {
-    text-decoration: none;
-
-    color: #fff;
-    background: var(--orange);
-    padding: 0.75rem 1.5rem;
-    color: #fff;
-    font-weight: 200;
   }
 `

@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     --orange: #ec6842;
     --grey:   #333333;
     --blue: #204569;
-
+    --bggrey: #f0f0f0;
 }
 
 body {
