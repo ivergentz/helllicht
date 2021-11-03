@@ -6,18 +6,16 @@ const Sidebar = ({ isOpen, toggle }) => {
   return (
     <>
       <SidebarContainer isOpen={isOpen}>
-        <SidebarWrapper>
-          <SidebarMenu>
-            <Icon onClick={toggle}>
-              <CloseIcon />
-            </Icon>
-            <Logo>i.gentz</Logo>
-            <SidebarLink onClick={toggle}>about</SidebarLink>
-            <SidebarLink onClick={toggle}>blog</SidebarLink>
-            <SidebarLink onClick={toggle}>projects</SidebarLink>
-            <SidebarLink onClick={toggle}>contact</SidebarLink>
-          </SidebarMenu>
-        </SidebarWrapper>
+        <SidebarMenu>
+          <Icon onClick={toggle}>
+            <CloseIcon />
+          </Icon>
+          <Logo>i.gentz</Logo>
+          <SidebarLink onClick={toggle}>about</SidebarLink>
+          <SidebarLink onClick={toggle}>blog</SidebarLink>
+          <SidebarLink onClick={toggle}>projects</SidebarLink>
+          <SidebarLink onClick={toggle}>contact</SidebarLink>
+        </SidebarMenu>
       </SidebarContainer>
     </>
   )
@@ -40,7 +38,6 @@ const SidebarContainer = styled.aside`
   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
   left: ${({ isOpen }) => (isOpen ? '0' : '100%')};
 `
-const SidebarWrapper = styled.div``
 
 const Icon = styled.div`
   top: 1.2rem;
@@ -72,6 +69,9 @@ const SidebarLink = styled.div`
 
 const SidebarMenu = styled.ul`
   display: grid;
+  margin: 0;
+  padding: 0;
+  margin-top: -40vh;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
   text-align: center;
@@ -87,6 +87,6 @@ const Logo = styled.div`
   transform: rotate(-5deg);
   color: var(--grey);
   top: 1.2rem;
-  left: 1.5rem;
+  /* left: 1.5rem; */
   font-size: 2rem;
 `
