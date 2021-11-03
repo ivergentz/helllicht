@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import ContactSection from '../components/ContactSection'
 import Header from '../components/Header'
+import Insights from '../components/Insights'
 import JobSection from '../components/JobSection'
 import ReasonSection from '../components/ReasonSection'
 import Sidebar from '../components/Sidebar'
 import Tasks from '../components/Tasks'
 
 const Completepage = () => {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
     setIsOpen(!isOpen)
@@ -21,6 +22,7 @@ const Completepage = () => {
       <ContactSection />
       <ReasonSection />
       <ContactSection />
+      <Insights />
     </>
   )
 }

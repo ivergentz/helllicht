@@ -1,9 +1,8 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
-import { Link as LinkS } from 'react-scroll'
 import styled from 'styled-components/macro'
 
-const Sidebar = ({ isOpen, toggle, toggleHome }) => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
     <>
       <SidebarContainer isOpen={isOpen}>
@@ -36,9 +35,10 @@ const SidebarContainer = styled.aside`
   display: grid;
   align-items: center;
   left: 0;
-  transition: 0.3s ease-in-out;
+  top: 0;
+  transition: 0.5s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  left: ${({ isOpen }) => (isOpen ? '0' : '100%')};
 `
 const SidebarWrapper = styled.div``
 
@@ -53,7 +53,7 @@ const CloseIcon = styled(FaTimes)`
   color: var(--grey);
 `
 
-const SidebarLink = styled(LinkS)`
+const SidebarLink = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
