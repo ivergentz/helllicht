@@ -96,29 +96,27 @@ const SocialMedia = styled.section`
 
 const SocialMediaWrap = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 85%;
+  margin: 0 auto;
   max-width: 1100px;
   margin: 40px auto 0 auto;
 `
 
 const SocialLogo = styled.div`
+  width: 100%;
   color: var(--grey);
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: -1rem 0 3rem 0;
+  font-family: 'Shadows Into Light', cursive;
 `
 
 const SocialIcons = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 240px;
+  justify-content: space-around;
 `
 
 const SocialIconLink = styled.a`
