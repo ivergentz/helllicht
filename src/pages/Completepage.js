@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ContactSection from '../components/ContactSection'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Insights from '../components/Insights'
 import JobSection from '../components/JobSection'
@@ -23,6 +24,7 @@ const Completepage = () => {
       <ReasonSection />
       <ContactSection />
       <Insights />
+      <Footer />
     </>
   )
 }

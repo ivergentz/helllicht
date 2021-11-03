@@ -18,7 +18,7 @@ export default Insights
 
 const InsightsContainer = styled.section`
   margin: 0 auto;
-  width: 85%;
+  width: 75%;
 
   h3 {
     color: var(--grey);
