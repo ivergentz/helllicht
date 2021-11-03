@@ -20,7 +20,7 @@ const Header = ({ toggle }) => {
 
   return (
     <>
-      <HeaderContainer onScroll={scrollNav}>
+      <HeaderContainer onScroll={scrollNav ? changeNav : undefined}>
         <Logo>
           <h2 onClick={toggleHome}>i.gentz</h2>
         </Logo>
@@ -42,7 +42,6 @@ export default Header
 
 const HeaderContainer = styled.section`
   display: flex;
-  /* justify-content: flex-end; */
   width: 100vw;
   top: 0;
   position: fixed;
