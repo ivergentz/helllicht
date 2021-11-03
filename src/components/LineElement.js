@@ -11,4 +11,8 @@ const Line = styled.hr`
   width: 85%;
   margin: 5rem auto;
   border: 0.5px solid #ccc;
+
+  @media (min-width: 800px) {
+    max-width: 750px;
+  }
 `

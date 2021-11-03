@@ -6,56 +6,64 @@ import ButtonElement from './ButtonElement'
 const Footer = () => {
   return (
     <FooterContainer>
-      <h5 className="center">Das bin ich</h5>
-      <p className="center">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
-        deleniti minima placeat temporibus earum quos exercitationem cumque,
-        assumenda enim possimus fugit amet eaque quae quis quas ab est.
-      </p>
-      <SocialMedia>
-        <SocialMediaWrap>
-          <SocialLogo>i.gentz</SocialLogo>
-          <SocialIcons>
-            <SocialIconLink
-              href="https://www.facebook.de"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <FaFacebook />
-            </SocialIconLink>
-            <SocialIconLink
-              href="https://www.instagram.de"
-              target="_blank"
-              aria-label="Instgram"
-            >
-              <FaInstagram />
-            </SocialIconLink>
-            <SocialIconLink
-              href="https://www.youtube.de"
-              target="_blank"
-              aria-label="Youtube"
-            >
-              <FaYoutube />
-            </SocialIconLink>
-            <SocialIconLink
-              href="https://www.twitter.de"
-              target="_blank"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </SocialIconLink>
-          </SocialIcons>
-        </SocialMediaWrap>
-      </SocialMedia>
-      <h5 className="center">Das bin ich</h5>
-      <p className="center">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
-        deleniti minima placeat temporibus earum quos exercitationem cumque,
-        assumenda enim possimus fugit amet eaque quae quis quas ab est.
-      </p>
-      <ButtonElementEnd>
-        <ButtonElement />
-      </ButtonElementEnd>
+      <div className="maxwidth">
+        <h5 className="center">Das bin ich</h5>
+        <p className="center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
+          deleniti minima placeat temporibus earum quos exercitationem cumque,
+          assumenda enim possimus fugit amet eaque quae quis quas ab est.
+        </p>
+        <SocialMedia>
+          <SocialMediaWrap>
+            <SocialLogo>i.gentz</SocialLogo>
+            <SocialIcons>
+              <SocialIconLink
+                href="https://www.facebook.de"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </SocialIconLink>
+              <SocialIconLink
+                href="https://www.instagram.de"
+                target="_blank"
+                aria-label="Instgram"
+              >
+                <FaInstagram />
+              </SocialIconLink>
+              <SocialIconLink
+                href="https://www.youtube.de"
+                target="_blank"
+                aria-label="Youtube"
+              >
+                <FaYoutube />
+              </SocialIconLink>
+              <SocialIconLink
+                href="https://www.twitter.de"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </SocialIconLink>
+            </SocialIcons>
+          </SocialMediaWrap>
+        </SocialMedia>
+        <h5 className="center">Das bin ich</h5>
+        <p className="center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
+          deleniti minima placeat temporibus earum quos exercitationem cumque,
+          assumenda enim possimus fugit amet eaque quae quis quas ab est.
+        </p>
+        <h5 className="center">Das bin ich</h5>
+        <p className="center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
+          deleniti minima placeat temporibus earum quos exercitationem cumque,
+          assumenda enim possimus fugit amet eaque quae quis quas ab est.
+        </p>
+        <ButtonElementEnd>
+          <ButtonElement />
+        </ButtonElementEnd>
+      </div>
     </FooterContainer>
   )
 }
@@ -72,10 +80,13 @@ const FooterContainer = styled.section`
   color: var(--grey);
   margin: 2rem 0 0 0;
 
+  .maxwidth {
+    max-width: 1100px;
+  }
+
   .center {
     display: flex;
     justify-content: center;
-    width: 85%;
   }
 
   h5 {
@@ -90,7 +101,6 @@ const FooterContainer = styled.section`
 `
 
 const SocialMedia = styled.section`
-  max-width: 1000px;
   width: 100%;
 `
 
@@ -98,7 +108,7 @@ const SocialMediaWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 85%;
+  width: 60%;
   margin: 0 auto;
   max-width: 1100px;
   margin: 40px auto 0 auto;

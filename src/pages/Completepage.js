@@ -26,8 +26,8 @@ const Completepage = () => {
         <ReasonSection />
         <ContactSection />
         <Insights />
-        <Footer />
       </PageContainer>
+      <Footer />
     </>
   )
 }

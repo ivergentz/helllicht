@@ -14,4 +14,8 @@ const Statement = styled.div`
   color: var(--blue);
   padding: 1rem;
   font-size: 2rem;
+
+  @media (min-width: 800px) {
+    transform: rotate(-1deg);
+  }
 `

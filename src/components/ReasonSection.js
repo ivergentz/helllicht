@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import arrow from '../images/arrow-down-60x100.png'
-import handsup from '../images/highfive.png'
+import { default as handsup, default as test2 } from '../images/highfive.png'
 import test from '../images/iver.png'
 import ButtonElement from './ButtonElement'
 import LineElement from './LineElement'
@@ -20,61 +20,69 @@ const statementTwo = <p>lasdjfh lasdfjk kljashdf</p>
 const ReasonSection = () => {
   return (
     <ReasonContainer>
-      <StatementElement text={statementOne} />
-      <Reason>
-        <h5>1. Das Team</h5>
-        <ImgContainer>
-          <img src={test} alt="" />
-        </ImgContainer>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque id
-          voluptate repudiandae libero tempora non ipsa asperiores deleniti at
-          mollitia quaerat numquam corrupti perspiciatis quod, fuga obcaecati
-          maiores labore amet?
-          <br />
-          <br />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
-          ducimus aperiam rem. Eos autem quasi illum ab, aperiam, nisi quia
-          expedita exercitationem dicta, fugit esse maiores{' '}
-          <strong>ad deleniti dignissimos harum.</strong>
-        </p>
-      </Reason>
-      <Reason>
-        <h5>1. Das Team</h5>
-        <ImgContainer>
-          <img src={test} alt="" />
-        </ImgContainer>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque id
-          voluptate repudiandae libero tempora non ipsa asperiores deleniti at
-          mollitia quaerat numquam corrupti perspiciatis quod, fuga obcaecati
-          maiores labore amet?
-          <br />
-          <br />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
-          ducimus aperiam rem. Eos autem quasi illum ab, aperiam, nisi quia
-          expedita exercitationem dicta, fugit esse maiores{' '}
-          <strong>ad deleniti dignissimos harum.</strong>
-        </p>
-      </Reason>
-      <Reason>
-        <h5>1. Das Team</h5>
-        <ImgContainer>
-          <img src={test} alt="" />
-        </ImgContainer>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque id
-          voluptate repudiandae libero tempora non ipsa asperiores deleniti at
-          mollitia quaerat numquam corrupti perspiciatis quod, fuga obcaecati
-          maiores labore amet?
-          <br />
-          <br />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
-          ducimus aperiam rem. Eos autem quasi illum ab, aperiam, nisi quia
-          expedita exercitationem dicta, fugit esse maiores{' '}
-          <strong>ad deleniti dignissimos harum.</strong>
-        </p>
-      </Reason>
+      <StatementElement className="maxwidth" text={statementOne} />
+      <ContentContainer>
+        <Reason>
+          <h5>1. Das Team</h5>
+          <RowReverse>
+            <ImgContainer>
+              <img className="width" src={test} alt="" />
+            </ImgContainer>
+            <p className="width">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque id
+              voluptate repudiandae libero tempora non ipsa asperiores deleniti
+              at mollitia quaerat numquam corrupti perspiciatis quod, fuga
+              obcaecati maiores labore amet?
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae ducimus aperiam rem. Eos autem quasi illum ab,
+              aperiam, nisi quia expedita exercitationem dicta, fugit esse
+              maiores <strong>ad deleniti dignissimos harum.</strong>
+            </p>
+          </RowReverse>
+        </Reason>
+        <Reason>
+          <h5>1. Das Team</h5>
+          <RowReverse>
+            <ImgContainer>
+              <img className="width" src={test2} alt="" />
+            </ImgContainer>
+            <p className="width">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque id
+              voluptate repudiandae libero tempora non ipsa asperiores deleniti
+              at mollitia quaerat numquam corrupti perspiciatis quod, fuga
+              obcaecati maiores labore amet?
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae ducimus aperiam rem. Eos autem quasi illum ab,
+              aperiam, nisi quia expedita exercitationem dicta, fugit esse
+              maiores <strong>ad deleniti dignissimos harum.</strong>
+            </p>
+          </RowReverse>
+        </Reason>
+        <Reason>
+          <h5>1. Das Team</h5>
+          <RowReverse>
+            <ImgContainer>
+              <img src={test} alt="" />
+            </ImgContainer>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque id
+              voluptate repudiandae libero tempora non ipsa asperiores deleniti
+              at mollitia quaerat numquam corrupti perspiciatis quod, fuga
+              obcaecati maiores labore amet?
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae ducimus aperiam rem. Eos autem quasi illum ab,
+              aperiam, nisi quia expedita exercitationem dicta, fugit esse
+              maiores <strong>ad deleniti dignissimos harum.</strong>
+            </p>
+          </RowReverse>
+        </Reason>
+      </ContentContainer>
       <StatementElementTwo text={statementTwo} />
       <img src={handsup} alt="" />
       <img src={arrow} alt="" />
@@ -110,12 +118,31 @@ const ReasonContainer = styled.section`
     padding-bottom: 3rem;
     text-align: center;
   }
+
+  .maxwidth {
+    @media (min-width: 800px) {
+      margin: 0 auto;
+      max-width: 750px;
+    }
+  }
+`
+
+const ContentContainer = styled.div`
+  @media (min-width: 800px) {
+    max-width: 1100px;
+  }
 `
 const Reason = styled.div`
   h5 {
     font-size: 1.7rem;
     color: var(--orange);
     margin: 0;
+  }
+
+  .width {
+    @media (min-width: 800px) {
+      max-width: 60%;
+    }
   }
 
   p {
@@ -130,6 +157,12 @@ const Reason = styled.div`
     font-weight: 700;
   }
 `
+const RowReverse = styled.div`
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+`
 
 const ImgContainer = styled.div`
   display: flex;
@@ -139,7 +172,6 @@ const ImgContainer = styled.div`
 
   img {
     margin: 0 auto;
-
     max-width: 280px;
     max-height: 250px;
     object-fit: cover;
@@ -149,4 +181,9 @@ const ImgContainer = styled.div`
 
 const StatementElementTwo = styled(StatementElement)`
   margin-top: 0;
+
+  @media (min-width: 800px) {
+    max-width: 750px;
+    margin: 0 auto;
+  }
 `

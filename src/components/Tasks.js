@@ -115,6 +115,10 @@ const TasksContainer = styled.section`
     display: block;
     margin: 3rem auto;
   }
+
+  @media (min-width: 800px) {
+    max-width: 700px;
+  }
 `
 
 const Text = styled.p`
