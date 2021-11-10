@@ -6,60 +6,68 @@ import ButtonElement from './ButtonElement'
 const Footer = () => {
   return (
     <FooterContainer>
-      <div className="maxwidth">
-        <h5 className="center">Das bin ich</h5>
-        <p className="center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
-          deleniti minima placeat temporibus earum quos exercitationem cumque,
-          assumenda enim possimus fugit amet eaque quae quis quas ab est.
-        </p>
-        <SocialMedia>
-          <SocialMediaWrap>
-            <SocialLogo>i.gentz</SocialLogo>
-            <SocialIcons>
-              <SocialIconLink
-                href="https://www.facebook.de"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <FaFacebook />
-              </SocialIconLink>
-              <SocialIconLink
-                href="https://www.instagram.de"
-                target="_blank"
-                aria-label="Instgram"
-              >
-                <FaInstagram />
-              </SocialIconLink>
-              <SocialIconLink
-                href="https://www.youtube.de"
-                target="_blank"
-                aria-label="Youtube"
-              >
-                <FaYoutube />
-              </SocialIconLink>
-              <SocialIconLink
-                href="https://www.twitter.de"
-                target="_blank"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </SocialIconLink>
-            </SocialIcons>
-          </SocialMediaWrap>
-        </SocialMedia>
-        <h5 className="center">Das bin ich</h5>
-        <p className="center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
-          deleniti minima placeat temporibus earum quos exercitationem cumque,
-          assumenda enim possimus fugit amet eaque quae quis quas ab est.
-        </p>
-        <h5 className="center">Das bin ich</h5>
-        <p className="center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
-          deleniti minima placeat temporibus earum quos exercitationem cumque,
-          assumenda enim possimus fugit amet eaque quae quis quas ab est.
-        </p>
+      <div className="responsive__container">
+        <div className="responsive__text">
+          <h5 className="center">Das bin ich</h5>
+          <p className="center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et
+            animi deleniti minima placeat temporibus earum quos exercitationem
+            cumque, assumenda enim possimus fugit amet eaque quae quis quas ab
+            est.
+          </p>
+          <SocialMedia>
+            <SocialMediaWrap>
+              <SocialIcons>
+                <SocialIconLink
+                  href="https://www.facebook.de"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook />
+                </SocialIconLink>
+                <SocialIconLink
+                  href="https://www.instagram.de"
+                  target="_blank"
+                  aria-label="Instgram"
+                >
+                  <FaInstagram />
+                </SocialIconLink>
+                <SocialIconLink
+                  href="https://www.youtube.de"
+                  target="_blank"
+                  aria-label="Youtube"
+                >
+                  <FaYoutube />
+                </SocialIconLink>
+                <SocialIconLink
+                  href="https://www.twitter.de"
+                  target="_blank"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter />
+                </SocialIconLink>
+              </SocialIcons>
+            </SocialMediaWrap>
+          </SocialMedia>
+        </div>
+        <div className="responsive__text">
+          <h5 className="center">Das bin ich</h5>
+          <p className="center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et
+            animi deleniti minima placeat temporibus earum quos exercitationem
+            cumque, assumenda enim possimus fugit amet eaque quae quis quas ab
+            est.
+          </p>
+        </div>
+        <div className="responsive__text">
+          <h5 className="center">Das bin ich</h5>
+          <p className="center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et
+            animi deleniti minima placeat temporibus earum quos exercitationem
+            cumque, assumenda enim possimus fugit amet eaque quae quis quas ab
+            est.
+          </p>
+        </div>
         <ButtonElementEnd>
           <ButtonElement />
         </ButtonElementEnd>
@@ -80,18 +88,58 @@ const FooterContainer = styled.section`
   color: var(--grey);
   margin: 2rem 0 0 0;
 
-  .maxwidth {
-    max-width: 1100px;
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: left;
+    padding-bottom: 4rem;
+  }
+
+  .responsive__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relatvie;
+    /* width: 85%; */
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1100px;
+    }
+  }
+
+  .responsive__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 800px) {
+      width: 33%;
+    }
   }
 
   .center {
     display: flex;
     justify-content: center;
+    width: 85%;
+
+    @media (min-width: 800px) {
+      justify-content: flex-start;
+    }
   }
 
   h5 {
     font-size: 1.2rem;
     margin: 3rem 0 0.5rem 0;
+
+    @media (min-width: 800px) {
+      margin-left: 0;
+      line-height: 1rem;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   p {
@@ -108,25 +156,22 @@ const SocialMediaWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 60%;
+  width: 85%;
   margin: 0 auto;
   max-width: 1100px;
   margin: 40px auto 0 auto;
-`
-
-const SocialLogo = styled.div`
-  width: 100%;
-  color: var(--grey);
-  font-size: 2rem;
-  font-weight: 900;
-  margin: -1rem 0 3rem 0;
-  font-family: 'Shadows Into Light', cursive;
 `
 
 const SocialIcons = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
+
+  @media (min-width: 800px) {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 const SocialIconLink = styled.a`
@@ -136,4 +181,8 @@ const SocialIconLink = styled.a`
 
 const ButtonElementEnd = styled.div`
   margin: 3rem;
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 `
