@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
 import styled from 'styled-components'
+import ButtonElement from './ButtonElement'
 
 const Header = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
@@ -18,6 +19,8 @@ const Header = ({ toggle }) => {
     scroll.scrollToTop()
   }
 
+  const buttontext = 'Kontakt'
+
   return (
     <>
       <HeaderContainer onScroll={scrollNav ? changeNav : undefined}>
@@ -25,10 +28,9 @@ const Header = ({ toggle }) => {
           <h2 onClick={toggleHome}>i.gentz</h2>
         </Logo>
         <MenuItems>
-          <MenuItem>about</MenuItem>
-          <MenuItem>blog</MenuItem>
-          <MenuItem>projects</MenuItem>
-          <MenuItem>contact</MenuItem>
+          <MenuItem>Lebenslauf</MenuItem>
+          <MenuItem>Zeugnisse</MenuItem>
+          <Button buttonText={buttontext} />
         </MenuItems>
         <MobileIcon>
           <FaBars onClick={toggle} />
@@ -77,6 +79,7 @@ const MobileIcon = styled.div`
   width: 100%;
   margin-right: 3rem;
   justify-content: flex-end;
+  cursor: pointer;
 
   @media (min-width: 800px) {
     display: none;
@@ -108,4 +111,8 @@ const MenuItem = styled.li`
     color: var(--orange);
     transition: all 0.3s ease-out;
   }
+`
+
+const Button = styled(ButtonElement)`
+  color: blue;
 `

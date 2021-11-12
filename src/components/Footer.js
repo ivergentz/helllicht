@@ -6,72 +6,67 @@ import ButtonElement from './ButtonElement'
 const Footer = () => {
   return (
     <FooterContainer>
-      <div className="responsive__container">
-        <div className="responsive__text">
-          <h5 className="center">Das bin ich</h5>
-          <p className="center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et
-            animi deleniti minima placeat temporibus earum quos exercitationem
-            cumque, assumenda enim possimus fugit amet eaque quae quis quas ab
-            est.
-          </p>
-          <SocialMedia>
-            <SocialMediaWrap>
-              <SocialIcons>
-                <SocialIconLink
-                  href="https://www.facebook.de"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
-                  <FaFacebook />
-                </SocialIconLink>
-                <SocialIconLink
-                  href="https://www.instagram.de"
-                  target="_blank"
-                  aria-label="Instgram"
-                >
-                  <FaInstagram />
-                </SocialIconLink>
-                <SocialIconLink
-                  href="https://www.youtube.de"
-                  target="_blank"
-                  aria-label="Youtube"
-                >
-                  <FaYoutube />
-                </SocialIconLink>
-                <SocialIconLink
-                  href="https://www.twitter.de"
-                  target="_blank"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter />
-                </SocialIconLink>
-              </SocialIcons>
-            </SocialMediaWrap>
-          </SocialMedia>
-        </div>
-        <div className="responsive__text">
-          <h5 className="center">Das bin ich</h5>
-          <p className="center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et
-            animi deleniti minima placeat temporibus earum quos exercitationem
-            cumque, assumenda enim possimus fugit amet eaque quae quis quas ab
-            est.
-          </p>
-        </div>
-        <div className="responsive__text">
-          <h5 className="center">Das bin ich</h5>
-          <p className="center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et
-            animi deleniti minima placeat temporibus earum quos exercitationem
-            cumque, assumenda enim possimus fugit amet eaque quae quis quas ab
-            est.
-          </p>
-        </div>
-        <ButtonElementEnd>
-          <ButtonElement />
-        </ButtonElementEnd>
-      </div>
+      <Column>
+        <h5>Das bin ich</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
+          deleniti minima placeat temporibus earum quos exercitationem cumque,
+          assumenda enim possimus fugit amet eaque quae quis quas ab est.
+        </p>
+        <SocialMedia>
+          <SocialMediaWrap>
+            <SocialIcons>
+              <SocialIconLink
+                href="https://www.facebook.de"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </SocialIconLink>
+              <SocialIconLink
+                href="https://www.instagram.de"
+                target="_blank"
+                aria-label="Instgram"
+              >
+                <FaInstagram />
+              </SocialIconLink>
+              <SocialIconLink
+                href="https://www.youtube.de"
+                target="_blank"
+                aria-label="Youtube"
+              >
+                <FaYoutube />
+              </SocialIconLink>
+              <SocialIconLink
+                href="https://www.twitter.de"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </SocialIconLink>
+            </SocialIcons>
+          </SocialMediaWrap>
+        </SocialMedia>
+      </Column>
+      <Column>
+        <h5>Das bin ich</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
+          deleniti minima placeat temporibus earum quos exercitationem cumque,
+          assumenda enim possimus fugit amet eaque quae quis quas ab est.
+        </p>
+      </Column>
+      <Column>
+        <h5>Das bin ich</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo et animi
+          deleniti minima placeat temporibus earum quos exercitationem cumque,
+          assumenda enim possimus fugit amet eaque quae quis quas ab est.
+        </p>
+      </Column>
+      <ButtonElementEnd>
+        <ButtonElement />
+      </ButtonElementEnd>
     </FooterContainer>
   )
 }
@@ -88,63 +83,21 @@ const FooterContainer = styled.section`
   color: var(--grey);
   margin: 2rem 0 0 0;
 
-  @media (min-width: 800px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    text-align: left;
-    padding-bottom: 4rem;
-  }
-
-  .responsive__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relatvie;
-    /* width: 85%; */
-
-    @media (min-width: 800px) {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1100px;
-    }
-  }
-
-  .responsive__text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media (min-width: 800px) {
-      width: 33%;
-    }
-  }
-
-  .center {
-    display: flex;
-    justify-content: center;
-    width: 85%;
-
-    @media (min-width: 800px) {
-      justify-content: flex-start;
-    }
+  @media (min-width: 769px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: 1rem;
   }
 
   h5 {
     font-size: 1.2rem;
     margin: 3rem 0 0.5rem 0;
-
-    @media (min-width: 800px) {
-      margin-left: 0;
-      line-height: 1rem;
-      margin: 0;
-      padding: 0;
-    }
   }
 
   p {
     font-size: 1rem;
     line-height: 1.5rem;
+    margin: 2rem;
   }
 `
 
@@ -159,30 +112,42 @@ const SocialMediaWrap = styled.div`
   width: 85%;
   margin: 0 auto;
   max-width: 1100px;
-  margin: 40px auto 0 auto;
 `
 
 const SocialIcons = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
-  @media (min-width: 800px) {
-    width: 80%;
+  @media (min-width: 769px) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
   }
 `
 
 const SocialIconLink = styled.a`
   color: var(--grey);
   font-size: 24px;
+  margin: 0 1rem;
 `
 
 const ButtonElementEnd = styled.div`
   margin: 3rem;
 
-  @media (min-width: 800px) {
+  @media (min-width: 769px) {
     display: none;
+  }
+`
+
+const Column = styled.div`
+  @media (min-width: 769px) {
+    margin-bottom: 3rem;
+    text-align: left;
+
+    h5 {
+      margin-left: 2rem;
+    }
   }
 `

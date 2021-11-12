@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ButtonElement = () => {
+const ButtonElement = ({ buttonText }) => {
   return (
     <Button>
       <a href="mailto:jobs@helllicht.com?subject=Alles klar, ich bin dabei!">
-        Jetzt berwerben
+        {buttonText}
       </a>
     </Button>
   )

@@ -17,6 +17,8 @@ const statementOne = (
 
 const statementTwo = <p>lasdjfh lasdfjk kljashdf</p>
 
+const buttontext = 'ich bewerbe mich  ✍️'
+
 const ReasonSection = () => {
   return (
     <ReasonContainer>
@@ -87,7 +89,7 @@ const ReasonSection = () => {
       <img src={handsup} alt="" />
       <img src={arrow} alt="" />
       <h3>Dann nix wie losDann nix wie losDann nix wie los</h3>
-      <ButtonElement />
+      <ButtonElement buttonText={buttontext} />
       <LineElement />
     </ReasonContainer>
   )

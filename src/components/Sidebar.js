@@ -48,9 +48,11 @@ const Icon = styled.div`
 
 const CloseIcon = styled(FaTimes)`
   color: var(--grey);
+  font-size: 2rem;
+  cursor: pointer;
 `
 
-const SidebarLink = styled.div`
+const SidebarLink = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +62,7 @@ const SidebarLink = styled.div`
   transition: 0.2s ease-in-out;
   color: var(--yellow);
   cursor: pointer;
-
+  text-transform: uppercase;
   &:hover {
     color: var(--orange);
     transition: 0.2s ease-in-out;
