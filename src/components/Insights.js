@@ -4,33 +4,45 @@ import test from '../images/iver.png'
 
 const Insights = () => {
   return (
-    <InsightsContainer>
-      <h3>Einblicke in die Agentur</h3>
-      <img src={test} alt="" />
-      <img src={test} alt="" />
-      <img src={test} alt="" />
-      <img className="lastimg" src={test} alt="" />
-    </InsightsContainer>
+    <>
+      <Container>
+        <HeaderContainer>
+          <Headline>Einblicke in die Agentur</Headline>
+        </HeaderContainer>
+        <img src={test} alt="" />
+        <img src={test} alt="" />
+        <img src={test} alt="" />
+        <img src={test} alt="" />
+        <img src={test} alt="" />
+        <img src={test} alt="" />
+      </Container>
+    </>
   )
 }
 
 export default Insights
 
-const InsightsContainer = styled.section`
-  margin: 0 auto;
-  width: 75%;
-
-  h3 {
-    color: var(--grey);
-    font-size: 2rem;
-  }
+const Container = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   img {
-    max-width: 100%;
-    margin: 0.5rem 0;
+    max-width: 15rem;
+    margin: 1rem;
   }
 
-  .lastimg {
-    margin-bottom: 2rem;
+  @media (min-width: 600px) {
   }
+`
+
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+
+const Headline = styled.h3`
+  color: var(--grey);
+  font-size: 2rem;
 `

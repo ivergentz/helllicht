@@ -18,6 +18,8 @@ const statementTwo = <p> Lorem ipsum dolor sit quam praesentium libero. 🤭</p>
 
 const statementThree = <p>Auf den Punkt gebracht:</p>
 
+const buttontext = 'ich bewerbe mich  ✍️'
+
 const Tasks = () => {
   return (
     <>
@@ -88,7 +90,7 @@ const Tasks = () => {
             <strong>Zeitraum</strong>: sofort
           </p>
         </BoxSection>
-        <ButtonElement />
+        <ButtonElement buttonText={buttontext} />
       </TasksContainer>
     </>
   )
@@ -114,6 +116,10 @@ const TasksContainer = styled.section`
   img {
     display: block;
     margin: 3rem auto;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 700px;
   }
 `
 

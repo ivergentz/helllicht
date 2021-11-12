@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import ContactSection from '../components/ContactSection'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -18,15 +19,22 @@ const Completepage = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Header toggle={toggle} />
-      <JobSection />
-      <Tasks />
-      <ContactSection />
-      <ReasonSection />
-      <ContactSection />
-      <Insights />
+      <PageContainer>
+        <JobSection />
+        <Tasks />
+        <ContactSection />
+        <ReasonSection />
+        <ContactSection />
+        <Insights />
+      </PageContainer>
       <Footer />
     </>
   )
 }
 
 export default Completepage
+
+const PageContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1100px;
+`

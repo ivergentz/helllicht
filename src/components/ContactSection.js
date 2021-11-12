@@ -58,9 +58,16 @@ const Img = styled.img`
 const ButtonContainer = styled.div`
   font-size: 1rem;
   color: var(--grey);
+  margin: 0 auto;
 
   .email {
     color: var(--orange);
+  }
+
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+    max-width: 750px;
   }
 `
 
@@ -78,5 +85,12 @@ const Button = styled.div`
     width: 2rem;
     height: auto;
     margin-right: 0.25rem;
+  }
+
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+    margin: 0 4rem;
+    padding: 1.25rem;
   }
 `

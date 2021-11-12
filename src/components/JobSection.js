@@ -53,5 +53,9 @@ const BoxSection = styled.div`
   p {
     margin: 0;
     font-size: 2rem;
+
+    @media (min-width: 800px) {
+      transform: rotate(-1deg);
+    }
   }
 `
