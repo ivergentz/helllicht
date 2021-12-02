@@ -81,7 +81,6 @@ const FooterContainer = styled.section`
   width: 100%;
   background: var(--bggrey);
   color: var(--grey);
-  margin: 2rem 0 0 0;
 
   @media (min-width: 769px) {
     display: grid;

@@ -8,10 +8,8 @@ const JobSection = () => {
       <h3>Lorem ipsum dolor sitsitsitsitsitsitsit amet. </h3>
       <BoxSection>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elitLorem ipsum
-          dolor sit amet consectetur, adipisicing elit Lorem ipsum dolor sit
-          amet consectetur, adipisicing elit Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit
+          Lorem ipsum dolor sit amet consectetur, adipisicing adipisicing
+          adipisicing elitLorem ipsum
         </p>
       </BoxSection>
     </SectionContainer>
@@ -22,7 +20,7 @@ export default JobSection
 
 const SectionContainer = styled.section`
   display: flex;
-  width: 85%;
+  width: 90%;
   flex-wrap: wrap;
   margin: 7rem auto 0 auto;
   justify-content: center;
@@ -31,16 +29,15 @@ const SectionContainer = styled.section`
   h1 {
     color: var(--orange);
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   h3 {
-    padding: 1rem 3rem;
     font-weight: 800;
-    line-height: 2.5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--grey);
     text-align: center;
+    margin: 1.5rem 0;
   }
 `
 const BoxSection = styled.div`
@@ -50,6 +47,7 @@ const BoxSection = styled.div`
   padding: 1rem;
   font-size: 3rem;
   text-align: center;
+  margin-top: 1.5rem;
 
   p {
     margin: 0;

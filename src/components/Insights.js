@@ -6,9 +6,9 @@ const Insights = () => {
   return (
     <>
       <Container>
-        <HeaderContainer>
+        <HeadlineContainer>
           <Headline>Einblicke in die Agentur</Headline>
-        </HeaderContainer>
+        </HeadlineContainer>
         <img src={test} alt="" />
         <img src={test} alt="" />
         <img src={test} alt="" />
@@ -27,17 +27,18 @@ const Container = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   background: #fff;
+  padding-bottom: 1rem;
 
   img {
-    max-width: 15rem;
-    margin: 1rem;
+    max-width: 18rem;
+    margin: 1rem 1.5rem 1.5rem 1.5rem;
   }
 
   @media (min-width: 600px) {
   }
 `
 
-const HeaderContainer = styled.div`
+const HeadlineContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
