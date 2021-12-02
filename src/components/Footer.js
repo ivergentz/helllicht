@@ -3,6 +3,8 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import styled from 'styled-components'
 import ButtonElement from './ButtonElement'
 
+const buttontext = 'Hier gehts zu eurem Glück'
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -65,7 +67,7 @@ const Footer = () => {
         </p>
       </Column>
       <ButtonElementEnd>
-        <ButtonElement />
+        <ButtonElement buttonText={buttontext} />
       </ButtonElementEnd>
     </FooterContainer>
   )

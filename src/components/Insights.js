@@ -27,7 +27,7 @@ const Container = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   background: #fff;
-  padding-bottom: 1rem;
+  padding-bottom: 10rem;
 
   img {
     max-width: 18rem;
@@ -46,5 +46,6 @@ const HeadlineContainer = styled.div`
 
 const Headline = styled.h3`
   color: var(--grey);
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
 `
