@@ -15,14 +15,19 @@ const statementOne = (
   </p>
 )
 
-const statementTwo = <p>lasdjfh lasdfjk kljashdf</p>
+const statementTwo = (
+  <p>
+    lasdjfh lasdfjk kljashdf lasdjfh lasdfjk kljashdfasdjfh lasdfjk kljashdf
+    lasdjfh lasdfjk kljashdf
+  </p>
+)
 
 const buttontext = 'ich bewerbe mich  ✍️'
 
 const ReasonSection = () => {
   return (
     <ReasonContainer>
-      <StatementElement className="maxwidth" text={statementOne} />
+      <TopStatement className="maxwidth" text={statementOne} />
       <ContentContainer>
         <Reason>
           <h5>1. Das Team</h5>
@@ -88,7 +93,7 @@ const ReasonSection = () => {
       <StatementElementTwo text={statementTwo} />
       <img src={handsup} alt="" />
       <img src={arrow} alt="" />
-      <h3>Dann nix wie losDann nix wie losDann nix wie los</h3>
+      <h3>Dann nix wie losDann nix wie losDann los</h3>
       <ButtonElement buttonText={buttontext} />
       <LineElement />
     </ReasonContainer>
@@ -100,7 +105,7 @@ export default ReasonSection
 const ReasonContainer = styled.section`
   display: block;
   margin: 0 auto;
-  width: 85%;
+  width: 95%;
   background: #fff;
 
   img {
@@ -114,9 +119,10 @@ const ReasonContainer = styled.section`
 
   h3 {
     display: block;
+    width: 50%;
     margin: 0 auto;
     color: var(--grey);
-    font-size: 1.7rem;
+    font-size: 2rem;
     padding-top: 1.2rem;
     padding-bottom: 3rem;
     text-align: center;
@@ -137,7 +143,7 @@ const ContentContainer = styled.div`
 `
 const Reason = styled.div`
   h5 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: var(--orange);
     margin: 0;
   }
@@ -151,8 +157,8 @@ const Reason = styled.div`
   p {
     color: var(--grey);
     font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
     margin-bottom: 5rem;
   }
 
@@ -184,9 +190,14 @@ const ImgContainer = styled.div`
 
 const StatementElementTwo = styled(StatementElement)`
   margin-top: 0;
-
+  font-size: 2rem;
   @media (min-width: 800px) {
     max-width: 750px;
     margin: 0 auto;
   }
+`
+
+const TopStatement = styled(StatementElement)`
+  margin: 10rem 0;
+  font-size: 2rem;
 `
