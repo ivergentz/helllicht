@@ -12,8 +12,8 @@ const Statement = styled.div`
   font-family: 'Shadows Into Light', cursive;
   margin: 1.5rem 0;
   color: var(--blue);
-  padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  width: 95%;
 
   @media (min-width: 800px) {
     transform: rotate(-1deg);

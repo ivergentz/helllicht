@@ -8,8 +8,8 @@ const LineElement = () => {
 export default LineElement
 
 const Line = styled.hr`
-  width: 85%;
-  margin: 5rem auto;
+  width: 95%;
+  margin: 3rem auto;
   border: 0.5px solid #ccc;
 
   @media (min-width: 800px) {

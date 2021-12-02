@@ -8,9 +8,8 @@ import StatementElement from './StatementElement'
 
 const statementOne = (
   <p>
-    Lorem ipsum dolor sit amet consectetur, Iure amet provident dolorem,
-    recusandae at laudantium nisi magni consequatur libero pariatur hic natus
-    deserunt voluptate ab aspernatur sunt labore rem exercitationem?
+    Das kursive ist das Statement Element? Ja ist es und jetzt habe ich es
+    angepasst. Das soltle gehen jetzt
   </p>
 )
 
@@ -65,9 +64,9 @@ const Tasks = () => {
           reiciendis?
         </Text>
         <StatementElement className="line" text={statementTwo} />
-        <img src={arrow} alt="arrow down" />
-        <StatementElement text={statementThree} />
-        <img src={thumb} alt="thumb down" />
+        <Arrow src={arrow} alt="arrow down" />
+        <LastStatement text={statementThree} />
+        <Thumb src={thumb} alt="thumb down" />
         <BoxSection>
           <p>
             <strong>Job</strong>: Webentwickler
@@ -99,24 +98,19 @@ const Tasks = () => {
 export default Tasks
 
 const TasksContainer = styled.section`
-  margin: 0 auto;
-  margin-bottom: 5rem;
-  width: 85%;
+  margin: 3rem auto 5rem auto;
+  width: 95%;
   color: var(--grey);
   background: #fff;
 
   h4 {
     padding-top: 0.75em;
     margin-bottom: 0.75em;
+    font-size: 1.3rem;
   }
 
   .line {
     text-decoration: line-through;
-  }
-
-  img {
-    display: block;
-    margin: 3rem auto;
   }
 
   @media (min-width: 800px) {
@@ -127,7 +121,7 @@ const TasksContainer = styled.section`
 const Text = styled.p`
   text-align: left;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   margin: 0 0 1.5em;
 `
@@ -138,13 +132,31 @@ const BoxSection = styled.div`
   margin-bottom: 4rem;
   color: var(--grey);
   padding: 1rem;
-  font-size: 3rem;
   text-align: center;
 
   p {
-    margin: 0;
-    font-size: 1rem;
+    margin: 0.7rem auto;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+
     text-align: left;
     margin-bottom: 1.5rem;
   }
+`
+const LastStatement = styled(StatementElement)`
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+`
+
+const Arrow = styled.img`
+  display: block;
+  margin: 4.5rem auto 2rem auto;
+`
+
+const Thumb = styled.img`
+  display: block;
+
+  margin: 0 auto;
+  padding: 1rem;
 `

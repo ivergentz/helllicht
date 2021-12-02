@@ -20,7 +20,7 @@ export default JobSection
 
 const SectionContainer = styled.section`
   display: flex;
-  width: 90%;
+  width: 95%;
   flex-wrap: wrap;
   margin: 7rem auto 0 auto;
   justify-content: center;
