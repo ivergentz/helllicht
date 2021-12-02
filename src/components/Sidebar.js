@@ -7,9 +7,7 @@ const Sidebar = ({ isOpen, toggle }) => {
     <>
       <SidebarContainer isOpen={isOpen}>
         <SidebarMenu>
-          <Icon onClick={toggle}>
-            <CloseIcon />
-          </Icon>
+          <CloseIcon onClick={toggle} />
           <Logo>i.gentz</Logo>
           <SidebarLink onClick={toggle}>about</SidebarLink>
           <SidebarLink onClick={toggle}>blog</SidebarLink>
@@ -23,15 +21,15 @@ const Sidebar = ({ isOpen, toggle }) => {
 export default Sidebar
 
 const SidebarContainer = styled.aside`
+  display: grid;
   position: fixed;
+  padding-top: 1rem;
   z-index: 1000;
   width: 100%;
   height: 100%;
   background: #fff;
   color: var(--grey);
   font-weight: 900;
-  display: grid;
-  align-items: center;
   left: 0;
   top: 0;
   transition: 0.5s ease-in-out;
@@ -39,41 +37,16 @@ const SidebarContainer = styled.aside`
   left: ${({ isOpen }) => (isOpen ? '0' : '100%')};
 `
 
-const Icon = styled.div`
-  top: 1.2rem;
-  font-size: 2rem;
-  cursor: pointer;
-  outline: none;
-`
-
 const CloseIcon = styled(FaTimes)`
-  color: var(--grey);
-  font-size: 2rem;
+  margin: 0 auto;
   cursor: pointer;
-`
-
-const SidebarLink = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: var(--yellow);
-  cursor: pointer;
-  text-transform: uppercase;
-  &:hover {
-    color: var(--orange);
-    transition: 0.2s ease-in-out;
-  }
+  height: 50px;
 `
 
 const SidebarMenu = styled.ul`
   display: grid;
   margin: 0;
   padding: 0;
-  margin-top: -40vh;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
   text-align: center;
@@ -83,12 +56,26 @@ const SidebarMenu = styled.ul`
   }
 `
 
+const SidebarLink = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.7rem;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--orange);
+    transition: 0.2s ease-in;
+  }
+`
+
 const Logo = styled.div`
   font-weight: 100;
   font-family: 'Shadows Into Light', cursive;
   transform: rotate(-5deg);
   color: var(--grey);
-  top: 1.2rem;
-  /* left: 1.5rem; */
-  font-size: 2rem;
+  font-size: 2.5rem;
 `
