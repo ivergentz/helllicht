@@ -101,6 +101,7 @@ const ReasonContainer = styled.section`
   display: block;
   margin: 0 auto;
   width: 85%;
+  background: #fff;
 
   img {
     display: block;

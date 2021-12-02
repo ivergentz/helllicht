@@ -103,6 +103,7 @@ const TasksContainer = styled.section`
   margin-bottom: 5rem;
   width: 85%;
   color: var(--grey);
+  background: #fff;
 
   h4 {
     padding-top: 0.75em;

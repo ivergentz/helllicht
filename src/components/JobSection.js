@@ -26,6 +26,7 @@ const SectionContainer = styled.section`
   flex-wrap: wrap;
   margin: 7rem auto 0 auto;
   justify-content: center;
+  background: #fff;
 
   h1 {
     color: var(--orange);

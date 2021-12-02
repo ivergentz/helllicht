@@ -26,6 +26,7 @@ const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background: #fff;
 
   img {
     max-width: 15rem;

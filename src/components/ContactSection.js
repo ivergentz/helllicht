@@ -36,6 +36,7 @@ const ContactContainer = styled.section`
   display: block;
   width: 100%;
   text-align: center;
+  background: #fff;
   p {
     margin: 1rem auto;
     font-size: 1rem;

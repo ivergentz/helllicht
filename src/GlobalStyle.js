@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
+    background: var(--orange);
     margin: 0;
     padding: 0;
     font-size: 117.5%;

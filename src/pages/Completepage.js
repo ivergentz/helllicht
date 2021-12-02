@@ -35,6 +35,8 @@ const Completepage = () => {
 export default Completepage
 
 const PageContainer = styled.div`
+  background: #fff;
   margin: 0 auto;
   max-width: 1100px;
+  padding-top: 1.7rem;
 `
