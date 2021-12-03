@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
-import { animateScroll as scroll } from 'react-scroll'
+import { animateScroll as scroll, Link } from 'react-scroll'
 import styled from 'styled-components'
 import ButtonElement from './ButtonElement'
 
@@ -28,7 +28,18 @@ const Header = ({ toggle }) => {
           <h2 onClick={toggleHome}>i.gentz</h2>
         </Logo>
         <MenuItems>
-          <MenuItem>Lebenslauf</MenuItem>
+          <MenuItem>
+            <Link
+              to="footer"
+              smooth={true}
+              duration={2000}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              Footer
+            </Link>
+          </MenuItem>
           <MenuItem>Zeugnisse</MenuItem>
           <Button buttonText={buttontext} />
         </MenuItems>
@@ -65,6 +76,7 @@ const HeaderContainer = styled.section`
 const Logo = styled.div`
   display: flex;
   left: 0;
+  cursor: pointer;
 
   h2 {
     font-family: 'Shadows Into Light', cursive;

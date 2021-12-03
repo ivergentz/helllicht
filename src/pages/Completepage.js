@@ -9,12 +9,13 @@ import ReasonSection from '../components/ReasonSection'
 import Sidebar from '../components/Sidebar'
 import Tasks from '../components/Tasks'
 
-const Completepage = () => {
+const Completepage = footer => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -27,7 +28,7 @@ const Completepage = () => {
         <ContactSection />
         <Insights />
       </PageContainer>
-      <Footer />
+      <Footer id="footer" />
     </>
   )
 }

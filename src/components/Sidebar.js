@@ -9,10 +9,12 @@ const Sidebar = ({ isOpen, toggle }) => {
         <SidebarMenu>
           <CloseIcon onClick={toggle} />
           <Logo>i.gentz</Logo>
-          <SidebarLink onClick={toggle}>about</SidebarLink>
-          <SidebarLink onClick={toggle}>blog</SidebarLink>
-          <SidebarLink onClick={toggle}>projects</SidebarLink>
-          <SidebarLink onClick={toggle}>contact</SidebarLink>
+          <MenuItem>about</MenuItem>
+          <MenuItem onClick={toggle}>footer</MenuItem>
+          <MenuItem onClick={toggle}>projects</MenuItem>
+          <MenuItem onClick={toggle}>footer</MenuItem>
+          <MenuItem onClick={toggle}>Lebenslauf</MenuItem>
+          <MenuItem onClick={toggle}>Zeugnisse</MenuItem>
         </SidebarMenu>
       </SidebarContainer>
     </>
@@ -56,7 +58,7 @@ const SidebarMenu = styled.ul`
   }
 `
 
-const SidebarLink = styled.li`
+const MenuItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;

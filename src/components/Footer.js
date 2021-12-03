@@ -7,7 +7,7 @@ const buttontext = 'Hier gehts zu eurem Glück'
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <Column>
         <h5>Das bin ich</h5>
         <p>
