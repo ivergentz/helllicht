@@ -62,9 +62,8 @@ const HeaderContainer = styled.section`
   color: var(--grey);
   box-shadow: 2px 0 2px 1px rgba(0, 0, 0, 0.1);
   height: 4rem;
-  align-items: center;
   z-index: 100;
-  overflow-y: hidden;
+  align-items: center;
 
   @media (min-width: 800px) {
     box-shadow: ${({ onScroll }) => (onScroll ? '' : 'none')};
@@ -100,11 +99,12 @@ const MobileIcon = styled.div`
 
 const MenuItems = styled.ul`
   display: none;
-
   @media (min-width: 800px) {
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    align-items: center;
+
     margin-right: 5rem;
   }
 `
