@@ -32,7 +32,7 @@ const Header = ({ toggle }) => {
             <Link
               to="footer"
               smooth={true}
-              duration={2000}
+              duration={1000}
               spy={true}
               exact="true"
               offset={-80}
