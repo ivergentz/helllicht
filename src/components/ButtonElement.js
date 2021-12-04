@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const ButtonElement = ({ buttonText }) => {
   return (
     <Button>
-      <a href="mailto:jobs@helllicht.com?subject=Alles klar, ich bin dabei!">
-        {buttonText}
+      <a href="mailto:ivergentz@posteo.de?subject=Alles klar, ich bin dabei&body=Das%20muss%20ich%20nochmal%20bearbeiten%0D%0D%20Moin">
+        <button>{buttonText}</button>
       </a>
     </Button>
   )
@@ -17,13 +17,18 @@ const Button = styled.div`
   display: flex;
   justify-content: center;
 
-  a {
-    text-decoration: none;
-
+  button {
+    border: 0;
     color: #fff;
     background: var(--orange);
-    padding: 0.75rem 1.5rem;
-    color: #fff;
-    font-weight: 200;
+    padding: 0.5rem 1rem;
+    margin-left: 3rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
   }
 `

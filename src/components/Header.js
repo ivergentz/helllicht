@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
-import { animateScroll as scroll, Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
+import { animateScroll as scroll } from 'react-scroll'
 import styled from 'styled-components'
 import ButtonElement from './ButtonElement'
 
@@ -19,29 +20,26 @@ const Header = ({ toggle }) => {
     scroll.scrollToTop()
   }
 
-  const buttontext = 'Kontakt'
+  const buttontext = 'Kontakt ' + ' 📝'
 
   return (
     <>
       <HeaderContainer onScroll={scrollNav ? changeNav : undefined}>
-        <Logo>
-          <h2 onClick={toggleHome}>i.gentz</h2>
-        </Logo>
+        <LinkR to="/">
+          <Logo>
+            <h2 onClick={toggleHome}>i.gentz</h2>
+          </Logo>
+        </LinkR>
         <MenuItems>
-          <MenuItem>
-            <Link
-              to="footer"
-              smooth={true}
-              duration={1000}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              Footer
-            </Link>
-          </MenuItem>
-          <MenuItem>Zeugnisse</MenuItem>
-          <Button buttonText={buttontext} />
+          <LinkR to="cv" onClick={toggleHome}>
+            <MenuItem>Lebenslauf</MenuItem>
+          </LinkR>
+          <LinkR to="record" onClick={toggleHome}>
+            <MenuItem>Zeugnisse</MenuItem>
+          </LinkR>
+          <Button>
+            <ButtonElement buttonText={buttontext} />
+          </Button>
         </MenuItems>
         <MobileIcon>
           <FaBars onClick={toggle} />
@@ -53,7 +51,7 @@ const Header = ({ toggle }) => {
 
 export default Header
 
-const HeaderContainer = styled.section`
+const HeaderContainer = styled.nav`
   display: flex;
   width: 100vw;
   top: 0;
@@ -125,6 +123,9 @@ const MenuItem = styled.li`
   }
 `
 
-const Button = styled(ButtonElement)`
-  color: blue;
+const Button = styled.div``
+
+const LinkR = styled(Link)`
+  text-decoration: none;
+  color: var(--darkgrey);
 `
