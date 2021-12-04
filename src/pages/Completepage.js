@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import ContactSection from '../components/ContactSection'
 import Insights from '../components/Insights'
@@ -7,11 +7,11 @@ import ReasonSection from '../components/ReasonSection'
 import Tasks from '../components/Tasks'
 
 const CompletePage = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  // const [isOpen, setIsOpen] = useState(false)
 
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
+  // const toggle = () => {
+  //   setIsOpen(!isOpen)
+  // }
 
   return (
     <>

@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import PdfPage from '../components/PdfPage'
+import cv01 from '../media/pdf/cv.pdf'
 
-const CvPage = ({ isOpen, toggle }) => {
+const CvPage = () => {
   return (
     <Container>
-      <h1>CV PageContainer</h1>
+      <h4>CV PageContainer</h4>
+      <PdfPage pdf={cv01} />
     </Container>
   )
 }

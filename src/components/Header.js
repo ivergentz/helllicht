@@ -20,7 +20,7 @@ const Header = ({ toggle }) => {
     scroll.scrollToTop()
   }
 
-  const buttontext = 'Kontakt ' + ' 📝'
+  const buttontext = 'Kontakt 📝'
 
   return (
     <>
