@@ -38,7 +38,12 @@ const Header = ({ toggle }) => {
             <MenuItem>Zeugnisse</MenuItem>
           </LinkR>
           <Button>
-            <ButtonElement buttonText={buttontext} />
+            <ButtonElement
+              buttonText={buttontext}
+              href={
+                'mailto:ivergentz@posteo.de?subject=Alles klar, ich bin dabei&body=Das%20muss%20ich%20nochmal%20bearbeiten%0D%0D%20Moin'
+              }
+            />
           </Button>
         </MenuItems>
         <MobileIcon>

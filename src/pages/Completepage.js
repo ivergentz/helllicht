@@ -7,12 +7,6 @@ import ReasonSection from '../components/ReasonSection'
 import Tasks from '../components/Tasks'
 
 const CompletePage = () => {
-  // const [isOpen, setIsOpen] = useState(false)
-
-  // const toggle = () => {
-  //   setIsOpen(!isOpen)
-  // }
-
   return (
     <>
       <PageContainer>

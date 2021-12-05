@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import PdfPage from '../components/PdfPage'
-import cv01 from '../media/pdf/cv.pdf'
+import cv from '../media/pdf/cv.pdf'
 
 const CvPage = () => {
   return (
     <Container>
-      <h4>CV PageContainer</h4>
-      <PdfPage pdf={cv01} />
+      <PdfPage pdf={cv} />
     </Container>
   )
 }
@@ -15,10 +14,10 @@ const CvPage = () => {
 export default CvPage
 
 const Container = styled.section`
-  min-height: 80vh;
-  margin-top: 20vh;
-
-  h1 {
-    padding: 20vh;
-  }
+  display: flex;
+  background: #fff;
+  max-width: 1100px;
+  padding-top: 9rem;
+  justify-content: center;
+  margin: 0 auto;
 `

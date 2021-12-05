@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import PdfPage from '../components/PdfPage'
-import test from '../media/pdf/cv.pdf'
+import qualifications from '../media/pdf/qualifications.pdf'
 
 const RecordPage = () => {
   return (
     <Container>
-      <h1>Record PageContainer</h1>
-      <PdfPage pdf={test} />
+      <PdfPage pdf={qualifications} />
     </Container>
   )
 }
@@ -15,6 +14,10 @@ const RecordPage = () => {
 export default RecordPage
 
 const Container = styled.section`
-  min-height: 80vh;
-  margin-top: 20vh;
+  display: flex;
+  background: #fff;
+  max-width: 1100px;
+  padding-top: 9rem;
+  justify-content: center;
+  margin: 0 auto;
 `
