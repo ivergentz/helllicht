@@ -1,4 +1,4 @@
-import React from 'react'
+import { React } from 'react'
 import styled from 'styled-components'
 import ContactSection from '../components/ContactSection'
 import Insights from '../components/Insights'

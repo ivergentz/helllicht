@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ButtonElement = ({ buttonText, href, previousPage, nextPage }) => {
+const ButtonElement = ({ buttonText, href }) => {
   return (
     <Button>
       <a href={href}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -8,7 +8,13 @@ import CompletePage from './pages/CompletePage'
 import CvPage from './pages/CvPage'
 import RecordPage from './pages/RecordPage'
 
-const App = ({ toggle, isOpen }) => {
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <Router>
       <GlobalStyle />

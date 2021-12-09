@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import portrait from '../images/iver.png'
-import mail from '../images/mail_grey.png'
-import phone from '../images/phone_grey.png'
+import portrait from '../media/images/iver.png'
+import mail from '../media/images/mail_grey.png'
+import phone from '../media/images/phone_grey.png'
 import LineElement from './LineElement'
 
 const ContactSection = () => {
@@ -16,7 +16,6 @@ const ContactSection = () => {
       </p>
       <ButtonContainer>
         <Button>
-          {' '}
           <img src={phone} alt="" />
           01590 / 6593897
         </Button>

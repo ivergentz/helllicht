@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import arrow from '../images/arrow-down-60x100.png'
-import { default as handsup, default as test2 } from '../images/highfive.png'
-import test from '../images/iver.png'
+import arrow from '../media/images/arrow-down-60x100.png'
+import {
+  default as handsup,
+  default as test2,
+} from '../media/images/highfive.png'
+import test from '../media/images/iver.png'
 import ButtonElement from './ButtonElement'
 import LineElement from './LineElement'
 import StatementElement from './StatementElement'

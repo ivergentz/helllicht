@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react'
 import { Document, Page } from 'react-pdf'
 import styled from 'styled-components'
 
-const PdfPage = ({ pdf }) => {
+const PdfPage = ({ pdf, Logout }) => {
   const [numPages, setNumPages] = useState(null)
   const [pageNumber, setPageNumber] = useState(1)
 
@@ -64,6 +64,7 @@ const PdfPage = ({ pdf }) => {
           <Page pageNumber={pageNumber} />
         </Document>
       </DocumentContainer>
+      <button onClick={Logout}>Logout</button>
     </Container>
   )
 }
@@ -73,7 +74,11 @@ export default PdfPage
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+
+  button {
+    display: block;
+  }
 `
 
 const ButtonContainer = styled.div`
